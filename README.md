@@ -6,6 +6,7 @@ The entire script with all commands assigned are summarized in "host_pathogen_ma
 includes the commands for running Tophat and Bowtie. All the required input parameters can be specified 
 in a seperate Graphical User Interface (GUI) which is provided within this data package.
 For any questions please use the Github Tracking option.
+![alt text](https://github.com/nthomasCUBE/host_pathogen_mapping/blob/master/misc/pix.png)
 
 ## How to run the script
 At first, it needs to run the graphical user interface (GUI) to create a config file.
