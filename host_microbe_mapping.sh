@@ -4,15 +4,20 @@
 
 echo "-------------------------------------------------------------------"
 echo
-echo "               HOST_MICROBE_MAPPING v0.0.6                        "
-echo "                  24 MAY 2017                                      "
+echo "               HOST_MICROBE_MAPPING v0.0.7                         "
+echo "                  13 JAN 2018                                      "
 echo
 echo "-------------------------------------------------------------------"
 
-module load htseq
 module load cutadapt
 module load trimmomatic
 module load sortmerna
+#module load htseq
+module load star
+module load samtools
+module load eautils
+module load bedtools
+module load bwa
 
 function contains() {
     local n=$#
