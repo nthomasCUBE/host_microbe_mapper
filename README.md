@@ -1,5 +1,16 @@
 # host_pathogen_mapping
 
+## Requirements
+
+- FastQC (https://github.com/s-andrews/FastQC)
+- cutadapt (https://cutadapt.readthedocs.io/en/stable/)
+- trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
+- sortMeRNA (http://bioinfo.lifl.fr/RNA/sortmerna/)
+- bwa (https://sourceforge.net/projects/bio-bwa/)
+- tophat/STAR (https://ccb.jhu.edu/software/tophat/index.shtml; https://github.com/alexdobin/STAR)
+- samtools (http://samtools.sourceforge.net/)
+- htseq-count (https://htseq.readthedocs.io/en/release_0.9.1/)
+
 ## General description of the script
 The host_microbe_mapper was developed to analyse dual RNA-seq expression data with a host and a pathogen.
 The entire script with all commands assigned are summarized in "host_pathogen_mapping.sh" which 
