@@ -20,10 +20,10 @@ For any questions please use the Github Tracking option.
 ![alt text](https://github.com/nthomasCUBE/host_pathogen_mapping/blob/master/misc/pix.png)
 
 ## How to run the script
-At first, it needs to run the graphical user interface (GUI) to create a config file.
-Next, it can be used to start "host_pathogen_mapping.sh" where at the end
-the summarized counts for host and pathogen with/without the mapping results.
+'python GUI_host_pathogen_mapping.py' open a GUI where the FastQ files can be integrated and where
+the reference sequences can be defined.
+It creates a 'pipeline.sh' file, that can be started and does the mapping with help of the
+'data/host_microbe_mapping.sh' script.
 
-## Description of the input parameter
-The following passage gives an overview of all the parameters, that are obligate or optional prior to run
-the tool.
+
+
