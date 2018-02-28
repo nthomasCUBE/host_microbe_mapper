@@ -1,5 +1,5 @@
-
 # host_pathogen_mapping
+
 
 ## Requirements
 
@@ -11,14 +11,16 @@
 - tophat/STAR (https://ccb.jhu.edu/software/tophat/index.shtml; https://github.com/alexdobin/STAR)
 - samtools (http://samtools.sourceforge.net/)
 - htseq-count (https://htseq.readthedocs.io/en/release_0.9.1/)
-
+`
 ## General description of the script
 The host_microbe_mapper was developed to analyse dual RNA-seq expression data with a host and a pathogen.
 The entire script with all commands assigned are summarized in "host_pathogen_mapping.sh" which 
 includes the commands for running Tophat and Bowtie. All the required input parameters can be specified 
 in a seperate Graphical User Interface (GUI) which is provided within this data package.
 For any questions please use the Github Tracking option.
+
 ![alt text](https://github.com/nthomasCUBE/host_pathogen_mapping/blob/master/misc/pix.png)
+
 ![alt text](https://github.com/nthomasCUBE/host_pathogen_mapping/blob/master/misc/GUI_v0.png)
 
 ## Assembling of the 16S genes by the output of SortMeRNA
@@ -37,6 +39,12 @@ It creates a 'pipeline.sh' file, that can be started and does the mapping with h
 We used human, mouse and the pathogen Neisseria for demonstrating the pipeline using chromosomes chr19
 and by generating reads with help of ArtificialFastqGenerator.jar (Frampton et al. 2012).
 Human (NC_000019.10), mouse (NC_000085.6) and N. meningitidis (NC_003112.2).
+
+Species | Gene Bank Identifier
+------------ | -------------
+Homo sapiens | GCF_000001405.37 - 38.p11
+Mus musculus | GCF_000001635.26 - 38.p6
+Neisseria meningitidis | GCF_000008805.1 - ASM880v1
 
 ## To run demo data without GUI
 
