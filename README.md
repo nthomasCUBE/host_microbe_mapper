@@ -56,7 +56,7 @@ REF=../read_simulator/references/Neisseria_meningitidis_genome
 HUMAN=../read_simulator/references/Homo_sapiens_chr19.fasta
 MOUSE=../read_simulator/references/Mus_musculus_chr19.fasta
 
-./data/host_pathogen_mapping.sh -F ${FWD} -R ${RVS} -P ${REF} -C 4 -X /naslx/projects_mpiio/pr74ma/ge34juq2/HOST_MICROBE_MAPPER/host_pathogen_mapping-master/output2 -H $HUMAN -I $MOUSE
+./data/host_pathogen_mapping.sh -F ${FWD} -R ${RVS} -P ${REF} -C 4 -X /naslx//HOST_MICROBE_MAPPER/host_pathogen_mapping-master/output2 -H $HUMAN -I $MOUSE
 ```
 where F represents the forwards reads, F represents the reverse, P represents the microbial genome,
 whereas C represents the processor amount, X represents the output directory, H represents the first host genome
@@ -87,7 +87,7 @@ RVS.fastq
 NUMBER OF CPUs: 4
 FORWARD READS: FWD.fastq
 REVERSE READS: RVS.fastq
-Output dir: /naslx/projects_mpiio/pr74ma/ge34juq2/HOST_MICROBE_MAPPER/host_pathogen_mapping-master/output2_28feb18
+Output dir: /naslx//HOST_MICROBE_MAPPER/host_pathogen_mapping-master/output2_28feb18
 Pathogen genome: ../read_simulator/references/Neisseria_meningitidis_genome
 Eukaryotic genome: ../read_simulator/references/Homo_sapiens_chr19.fasta
 Eukaryotic genome: ../read_simulator/references/Mus_musculus_chr19.fasta
@@ -124,7 +124,7 @@ TrimmomaticPE: Started with arguments:
 Input Read Pairs: 7500 Both Surviving: 7500 (100.00%) Forward Only Surviving: 0 (0.00%) Reverse Only Surviving: 0 (0.00%) Dropped: 0 (0.00%)
 TrimmomaticPE: Completed successfully
 step-3: sortMeRNA
-/naslx/projects_mpiio/pr74ma/ge34juq2/HOST_MICROBE_MAPPER/host_pathogen_mapping-master/bin/sortmerna-2.1b
+/naslx//HOST_MICROBE_MAPPER/host_pathogen_mapping-master/bin/sortmerna-2.1b
 step-4: bwa (mapping to bacterium)
 [bwa_index] Pack FASTA... 0.02 sec
 [bwa_index] Construct BWT for the packed sequence...
@@ -163,7 +163,7 @@ Building a SMALL index
 [2018-02-28 17:29:36] Checking for reference FASTA file
         Warning: Could not find FASTA file /gpfs/proj/abc/tmp.qtfwssmZHr/GENOME2.fa
 [2018-02-28 17:29:36] Reconstituting reference FASTA file from Bowtie index
-  Executing: /naslx/projects_mpiio/pr74ma/ge34juq2/HOST_MICROBE_MAPPER/host_pathogen_mapping-master/bin/bowtie2-2.3.3.1-linux-x86_64/bowtie2-inspect /gpfs/proj/abc/tmp.qtfwssmZHr/GENOME2 > /gpfs/proj/abc/tmp.qtfwssmZHr/tophat/tmp/GENOME2.fa
+  Executing: /naslx//HOST_MICROBE_MAPPER/host_pathogen_mapping-master/bin/bowtie2-2.3.3.1-linux-x86_64/bowtie2-inspect /gpfs/proj/abc/tmp.qtfwssmZHr/GENOME2 > /gpfs/proj/abc/tmp.qtfwssmZHr/tophat/tmp/GENOME2.fa
 [2018-02-28 17:29:39] Generating SAM header for /gpfs/proj/abc/tmp.qtfwssmZHr/GENOME2
 [2018-02-28 17:29:39] Preparing reads
          left reads: min. length=186, max. length=200, 5052 kept reads (0 discarded)
@@ -238,7 +238,7 @@ Building a SMALL index
 [2018-02-28 17:30:36] Checking for reference FASTA file
         Warning: Could not find FASTA file /gpfs/proj/abc/tmp.qtfwssmZHr/GENOME3.fa
 [2018-02-28 17:30:36] Reconstituting reference FASTA file from Bowtie index
-  Executing: /naslx/projects_mpiio/pr74ma/ge34juq2/HOST_MICROBE_MAPPER/host_pathogen_mapping-master/bin/bowtie2-2.3.3.1-linux-x86_64/bowtie2-inspect /gpfs/proj/abc/tmp.qtfwssmZHr/GENOME3 > /gpfs/proj/abc/tmp.qtfwssmZHr/tophat2/tmp/GENOME3.fa
+  Executing: /naslx//HOST_MICROBE_MAPPER/host_pathogen_mapping-master/bin/bowtie2-2.3.3.1-linux-x86_64/bowtie2-inspect /gpfs/proj/abc/tmp.qtfwssmZHr/GENOME3 > /gpfs/proj/abc/tmp.qtfwssmZHr/tophat2/tmp/GENOME3.fa
 [2018-02-28 17:30:39] Generating SAM header for /gpfs/proj/abc/tmp.qtfwssmZHr/GENOME3
 [2018-02-28 17:30:40] Preparing reads
          left reads: min. length=186, max. length=200, 5052 kept reads (0 discarded)
