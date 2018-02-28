@@ -42,6 +42,7 @@ Human (NC_000019.10), mouse (NC_000085.6) and N. meningitidis (NC_003112.2).
 
 It is possible to run the host_microbe_mapper also without the GUI, which requires the following.
 
+```
 FWD=Nm_cds_reads.1.fastq
 RVS=Nm_cds_reads.2.fastq
 REF=../read_simulator/references/Neisseria_meningitidis_genome
@@ -53,7 +54,7 @@ MOUSE=../read_simulator/references/Mus_musculus_chr19.fasta
 where F represents the forwards reads, F represents the reverse, P represents the microbial genome,
 whereas C represents the processor amount, X represents the output directory, H represents the first host genome
 (here: human) reference and I represents the second host reference (here: mouse).
-
+```
 
 
 
