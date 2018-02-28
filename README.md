@@ -18,7 +18,7 @@ includes the commands for running Tophat and Bowtie. All the required input para
 in a seperate Graphical User Interface (GUI) which is provided within this data package.
 For any questions please use the Github Tracking option.
 ![alt text](https://github.com/nthomasCUBE/host_pathogen_mapping/blob/master/misc/pix.png)
-![alt text](https://github.com/nthomasCUBE/host_pathogen_mapping/blob/master/misc/pix.png)
+![alt text](https://github.com/nthomasCUBE/host_pathogen_mapping/blob/master/misc/GUI_v0.png)
 
 ## Assembling of the 16S genes by the output of SortMeRNA
 Furthermore, we can extract the output of the sortMeRNA output form mapped reads to the 16S rRNA
