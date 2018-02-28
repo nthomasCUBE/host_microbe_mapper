@@ -235,8 +235,7 @@ PATH=bin/bwa-0.7.17/:$PATH
 PATH=bin/FastQC/:$PATH
 PATH=bin/sortmerna-2.1b/scripts/:$PATH
 
-DIR=/naslx/projects_mpiio/pr74ma/ge34juq2/HOST_MICROBE_MAPPER/host_pathogen_mapping-master/out/
-./data/host_pathogen_mapping.sh -F __e1A__ -R __e1A2__ -P __e2B__ -C 1 -X output
+./data/host_pathogen_mapping.sh -F __e1A__ -R __e1A2__ -P __e2B__ -C 1 -X output -H __e1B__ -I __e2A__ -J __e3A__ -K __e3B__ -V __e3__
 		"""
 	
 		template=template.replace("__e1A__", e1A)
@@ -249,7 +248,7 @@ DIR=/naslx/projects_mpiio/pr74ma/ge34juq2/HOST_MICROBE_MAPPER/host_pathogen_mapp
                 template=template.replace("__e3__",  str(e3))
                 template=template.replace("__e4__",  str(e4))
 
-		fw=file("pipeline.sh","w")
+		fw=file("pipeline_v2.sh","w")
 		fw.write(template)
 		fw.close()
 
