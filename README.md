@@ -50,11 +50,10 @@ HUMAN=../read_simulator/references/Homo_sapiens_chr19.fasta
 MOUSE=../read_simulator/references/Mus_musculus_chr19.fasta
 
 ./data/host_pathogen_mapping.sh -F ${FWD} -R ${RVS} -P ${REF} -C 4 -X /naslx/projects_mpiio/pr74ma/ge34juq2/HOST_MICROBE_MAPPER/host_pathogen_mapping-master/output2 -H $HUMAN -I $MOUSE
-
+```
 where F represents the forwards reads, F represents the reverse, P represents the microbial genome,
 whereas C represents the processor amount, X represents the output directory, H represents the first host genome
 (here: human) reference and I represents the second host reference (here: mouse).
-```
 
 
 
