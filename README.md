@@ -19,6 +19,12 @@ in a seperate Graphical User Interface (GUI) which is provided within this data 
 For any questions please use the Github Tracking option.
 ![alt text](https://github.com/nthomasCUBE/host_pathogen_mapping/blob/master/misc/pix.png)
 
+## Assembling of the 16S genes by the output of SortMeRNA
+Furthermore, we can extract the output of the sortMeRNA output form mapped reads to the 16S rRNA
+gene and used that as input for the REAGO, in case that paired end sequencing information was used.
+This is done by using the script 'data/extract_16.py' and by pointing to the output directory from
+the host_microbe_mapper 'python data/extract_16.py <OUTPUT_DIR>'
+
 ## How to run the script
 'python GUI_host_pathogen_mapping.py' open a GUI where the FastQ files can be integrated and where
 the reference sequences can be defined.
