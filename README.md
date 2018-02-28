@@ -1,3 +1,4 @@
+
 # host_pathogen_mapping
 
 ## Requirements
@@ -36,6 +37,30 @@ It creates a 'pipeline.sh' file, that can be started and does the mapping with h
 We used human, mouse and the pathogen Neisseria for demonstrating the pipeline using chromosomes chr19
 and by generating reads with help of ArtificialFastqGenerator.jar (Frampton et al. 2012).
 Human (NC_000019.10), mouse (NC_000085.6) and N. meningitidis (NC_003112.2).
+
+## To run demo data without GUI
+
+It is possible to run the host_microbe_mapper also without the GUI, which requires the following.
+
+FWD=Nm_cds_reads.1.fastq
+RVS=Nm_cds_reads.2.fastq
+REF=../read_simulator/references/Neisseria_meningitidis_genome
+HUMAN=../read_simulator/references/Homo_sapiens_chr19.fasta
+MOUSE=../read_simulator/references/Mus_musculus_chr19.fasta
+
+./data/host_pathogen_mapping.sh -F ${FWD} -R ${RVS} -P ${REF} -C 4 -X /naslx/projects_mpiio/pr74ma/ge34juq2/HOST_MICROBE_MAPPER/host_pathogen_mapping-master/output2 -H $HUMAN -I $MOUSE
+
+where F represents the forwards reads, F represents the reverse, P represents the microbial genome,
+whereas C represents the processor amount, X represents the output directory, H represents the first host genome
+(here: human) reference and I represents the second host reference (here: mouse).
+
+
+
+
+
+
+
+
 
 
 
