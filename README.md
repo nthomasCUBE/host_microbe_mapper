@@ -55,7 +55,15 @@ where F represents the forwards reads, F represents the reverse, P represents th
 whereas C represents the processor amount, X represents the output directory, H represents the first host genome
 (here: human) reference and I represents the second host reference (here: mouse).
 
-
+Parameter | Meaning
+------------ | -------------
+F | forward reads in the FASTQ format
+R | reverse reads in the FASTQ format
+P | microbe reference in FASTA format
+C | processor amount 
+X | output directory
+H | human mapping reference
+I | mouse mapping reference
 
 
 
