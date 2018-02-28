@@ -24,7 +24,7 @@ function contains() {
 
 HOST_MAPPER="tophat"
 
-while getopts "F:R:P:H:I:O:A:B:C:X:J:K:L:U" opt; do
+while getopts "F:R:P:H:I:O:A:B:C:X:J:K:L:V:U" opt; do
   case $opt in
     F)
       FWD_ORIG=$OPTARG
@@ -67,6 +67,9 @@ while getopts "F:R:P:H:I:O:A:B:C:X:J:K:L:U" opt; do
       ;;
     U)
       PREPROCESSING=TRUE
+      ;;
+    V)
+      SUBSET=$OPTARG
       ;;
   esac
 done
@@ -157,6 +160,20 @@ else
 	cp ${RVS_ORIG} ${RVS}
 fi
 
+if [ -z ${SUBSET} ]
+then
+	echo "no subsets - complete set to use"
+else
+	tmp=$(mktemp)
+	python data/generate_random_set.py $FWD $SUBSET > $tmp
+	mv $temp $FWD
+
+	tmp=$(mktemp)
+        python data/generate_random_set.py $RVS $SUBSET > $temp
+	mv $temp $RVS
+fi
+
+
 if [ -z "$GENOME" ]
 then
 	echo ""
@@ -215,7 +232,7 @@ if [ -z ${PREPROCESSING} ]
 then
 	echo "step-1: cutadapt"
 	if [ -z ${RVS_ORIG} ]
-	then
+		then
 	        cutadapt \
 	                    -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC \
 	                    -o ${FWD}.trimmed.fastq ${FWD} >> $DIR/make_test_runs.log
@@ -306,6 +323,8 @@ ${smr}/rRNA_databases/rfam-5s-database-id98.fasta,${smr}/index/rfam-5s-db:\
 ${smr}/rRNA_databases/rfam-5.8s-database-id98.fasta,${smr}/index/rfam-5.8s-db --reads ${FASTQ_MERGED} --paired_in --num_alignments 1 --aligned ${FASTQ_MERGED}_accepted --log --sam --fastx --other ${FASTQ_MERGED}_rejected >> $DIR/make_test_runs.log
 	        less ${FASTQ_MERGED}_rejected* | grep -v "^$" > ${FASTQ_MERGED}_rejected.fastq.fixed
 		bash unmerge-paired-reads.sh ${FASTQ_MERGED}_rejected.fastq.fixed ${FASTQ_FQ_OUT1} ${FASTQ_FQ_OUT2} >> $DIR/make_test_runs.log
+                less ${FASTQ_MERGED}_rejected* | grep -v "^$" > ${FASTQ_MERGED}_rejected.fastq.fixed
+                bash unmerge-paired-reads.sh ${FASTQ_MERGED}_rejected.fastq.fixed ${FASTQ_FQ_OUT1} ${FASTQ_FQ_OUT2} >> $DIR/make_test_runs.log
 	fi
 
 	cp ${FASTQ_MERGED}_accepted.sam ${DIR}/results/rRNA_matches.sam
@@ -321,7 +340,7 @@ ${smr}/rRNA_databases/rfam-5.8s-database-id98.fasta,${smr}/index/rfam-5.8s-db --
 	fi
 	#rm ${FASTQ_MERGED}*accepted*
 	rm ${FASTQ_MERGED}*rejected*
-	#rm ${FASTQ_MERGED}
+	rm ${FASTQ_MERGED}
 	cd ${cur_path}
 else
 	echo "no preprocessing will be performed..."
