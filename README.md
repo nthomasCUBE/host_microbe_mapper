@@ -35,5 +35,8 @@ It creates a 'pipeline.sh' file, that can be started and does the mapping with h
 ## Demo data
 We used human, mouse and the pathogen Neisseria for demonstrating the pipeline using chromosomes chr19
 and by generating reads with help of ArtificialFastqGenerator.jar (Frampton et al. 2012).
+Human (NC_000019.10), mouse (NC_000085.6) and N. meningitidis (NC_003112.2).
+
+
 
 
