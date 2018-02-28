@@ -32,5 +32,8 @@ the reference sequences can be defined.
 It creates a 'pipeline.sh' file, that can be started and does the mapping with help of the
 'data/host_microbe_mapping.sh' script.
 
+## Demo data
+We used human, mouse and the pathogen Neisseria for demonstrating the pipeline using chromosomes chr19
+and by generating reads with help of ArtificialFastqGenerator.jar (Frampton et al. 2012).
 
 
